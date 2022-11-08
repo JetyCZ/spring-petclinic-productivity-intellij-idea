@@ -78,7 +78,15 @@ class OwnerControllerTests {
 		max.setName("Max");
 		max.setBirthDate(LocalDate.now());
 		george.addPet(max);
+
 		max.setId(1);
+
+		Pet feebee = new Pet();
+		feebee.setName("Feebee");
+		feebee.setBirthDate(LocalDate.now());
+		george.addPet(feebee);
+		feebee.setId(2);
+
 		return george;
 	};
 

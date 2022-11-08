@@ -131,16 +131,18 @@ public class Owner extends Person {
 	 */
 	public Pet getPet(String name, boolean ignoreNew) {
 		name = name.toLowerCase();
+		Pet result = null;
 		for (Pet pet : getPets()) {
 			if (!ignoreNew || !pet.isNew()) {
 				String compName = pet.getName();
 				compName = compName == null ? "" : compName.toLowerCase();
 				if (compName.equals(name)) {
-					return pet;
+					result = pet;
+					break;
 				}
 			}
 		}
-		return null;
+		return result;
 	}
 
 	@Override

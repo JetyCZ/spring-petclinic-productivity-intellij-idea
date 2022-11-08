@@ -11,4 +11,10 @@ class OwnerTest {
 		Owner george = OwnerControllerTests.george();
 		george.addVisit(-1, new Visit());
 	}
+
+	@Test
+	void getPet() {
+		Owner george = OwnerControllerTests.george();
+		assertNotNull(george.getPet("Feebee"));
+	}
 }
