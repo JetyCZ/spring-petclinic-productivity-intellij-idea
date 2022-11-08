@@ -63,7 +63,7 @@ class OwnerControllerTests {
 	@MockBean
 	private OwnerRepository owners;
 
-	private Owner george() {
+	public static Owner george() {
 		Owner george = new Owner();
 		george.setId(TEST_OWNER_ID);
 		george.setFirstName("George");
