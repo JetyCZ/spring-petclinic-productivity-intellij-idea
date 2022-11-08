@@ -1,7 +1,9 @@
 package org.springframework.samples.petclinic.owner;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Date;
 import org.junit.jupiter.api.Test;
 
 class OwnerTest {

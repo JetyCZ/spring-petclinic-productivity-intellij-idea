@@ -17,6 +17,7 @@ package org.springframework.samples.petclinic.owner;
 
 import java.time.LocalDate;
 import java.util.Collection;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 

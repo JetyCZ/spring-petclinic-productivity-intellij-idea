@@ -16,6 +16,7 @@
 package org.springframework.samples.petclinic.owner;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -63,6 +64,16 @@ public class Owner extends Person {
 	@JoinColumn(name = "owner_id")
 	@OrderBy("name")
 	private List<Pet> pets = new ArrayList<>();
+
+	public Owner() {
+	}
+
+	public Owner(String address, String city, String telephone, List<Pet> pets) {
+		this.address = address;
+		this.city = city;
+		this.telephone = telephone;
+		this.pets = pets;
+	}
 
 	public String getAddress() {
 		return this.address;
@@ -142,6 +153,7 @@ public class Owner extends Person {
 				}
 			}
 		}
+
 		return result;
 	}
 
